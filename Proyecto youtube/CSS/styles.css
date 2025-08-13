@@ -1,0 +1,164 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #fff;
+  --primary-text-color: #0f0f0f;
+  --secondary-text-color: #606060;
+  --tertiary-text-color: #999;
+  --general-text-font: 'Roboto', sans-serif;
+  --base-font-size: 16px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  font-family: var(--general-text-font);
+}
+
+#top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  height: 60px;
+  top: 0;
+  background-color: #fff;
+  padding: 0 16px;
+}
+
+#top-bar > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#top-bar > div > div {
+  margin: 1px 6px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lupa {
+  width: 64px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.botontres {
+  padding: 8px;
+}
+
+.logo {
+  padding: 18px 14px 18px 16px;
+}
+
+input {
+  margin: 0px 0px 0px 20px;
+  border-radius: 15px;
+  width: 536px;
+  height: 40px;
+}
+
+.cuenta {
+  border-radius: 50%;
+}
+
+#sidebar {
+  position: sticky;
+  width: 216px;
+  top: 60px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+#sidebar > section > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 12px;
+}
+
+#sidebar > section > div:hover {
+  background-color: #f2f2f2; 
+  border-radius: 13px;
+}
+
+.icon {
+  width:40px;                     
+  min-width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.icon > img {
+  border-radius: 50%;
+}
+
+.separator {
+  height: 1px;
+  width: 216px;
+  border: none;
+  background-color: #e5e5e5;
+  margin: 8px 0;
+}
+
+.menu-title {
+  padding: 8px 12px;
+  max-width: 170px;
+  cursor: pointer;
+}
+
+.menu-title p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+#category-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 60px;
+  padding: 20px;
+  background-color: #fff
+}
+
+#category-bar > div {
+  background-color: #f2f2f2;
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.containercolumns {
+  display: grid;
+  grid-template-columns: 216px 1fr;
+}
+
+.containerrows {
+  display: grid;
+  grid-template-rows: 56px 1fr;
+}
+
+#video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 20px;
+}
