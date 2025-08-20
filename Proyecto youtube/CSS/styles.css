@@ -13,7 +13,7 @@
   --base-font-size: 16px;
 }
 
-input, .input, .lupa, #sidebar {
+#sidebar, input, .input, .lupa {
   display: none;
 }
 
@@ -31,7 +31,7 @@ body {
   top: 0;
   background-color: var(--background-color);
   padding: 0 16px;
-  z-index: 10;
+  z-index: 1000;
 }
 
 #top-bar > div {
@@ -74,33 +74,6 @@ input {
 
 .cuenta {
   border-radius: 50%;
-}
-
-#sidebar {
-  position: sticky;
-  top: 60px;
-  height: calc(100vh - 60px);
-  overflow-y: auto;
-  overflow-x: hidden;
-  background-color: var(--background-color);
-}
-
-#sidebar:hover {
-  overflow-y: scroll; 
-  scrollbar-width: thin;
-  scrollbar-color: var(--secondary-text-color);
-}
-
-#sidebar > section > div {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0px 12px;
-}
-
-#sidebar > section > div:hover {
-  background-color: var(--tertiary-text-color); 
-  border-radius: 13px;
 }
 
 .icon {
@@ -167,11 +140,6 @@ input {
   white-space: nowrap;
 }
 
-.containercolumns {
-  display: grid;
-  grid-template-columns: 10% 1fr;
-  gap: 20px;
-}
 
 .containerrows {
   display: grid;
@@ -262,21 +230,74 @@ input {
 }
 
 
+
 /* Extra small devices (phones, 600px and down) 
 @media only screen and (max-width: 600px) {...} */
 
   /*Small devices (portrait tablets and large phones, 600px and up)*/
 @media only screen and (min-width: 600px) {
-  #sidebar, input, .input, .lupa {
-    display: flex;
-  }
-} 
+  input, .input, .lupa {
+  display: flex; }
+  
+  .containercolumns {
+  display: grid;
+  grid-template-columns: 10% 1fr;
+  gap: 20px;
+}
 
-/* Medium devices (landscape tablets, 768px and up) 
-@media only screen and (min-width: 768px) {...} */
+  #sidebar {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 60px;
+  height: calc(100vh - 60px);
+  }
+
+  .aside {
+    display: none;
+  }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up)
+@media only screen and (min-width: 768px) {}*/
+
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+
+  #sidebar {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 60px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--background-color);
 }
+
+#sidebar:hover {
+  overflow-y: scroll; 
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-text-color);
+}
+
+#sidebar > section > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 12px;
+}
+
+#sidebar > section > div:hover {
+  background-color: var(--tertiary-text-color); 
+  border-radius: 13px;
+}
+
+
+}
+
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) 
